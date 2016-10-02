@@ -1,7 +1,7 @@
 cd $PSScriptRoot
 
 if (Test-Path 'install.lock') { return }
-ni install.lock -type file -force | Out-Null
+ni install.lock -Type file -Force | Out-Null
 
 # Install dotnet cli
 $dotnetPath = "$pwd\.dotnet"
@@ -18,7 +18,13 @@ $env:Path = if ($env:Path -like "*$dotnetPath*") { $env:Path } else { "$dotnetPa
 iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
 
 # Install nuget command line
-cinst nuget.commandline -y | Out-Null
+cinst nuget.commandline -y
+
+# Install npm
+cinst nodejs.install -y
+
+# Install bower
+npm install -g bower
 
 # Install FAKE
 nuget install FAKE -OutputDirectory packages -ExcludeVersion -ConfigFile nuget.config -Verbosity quiet

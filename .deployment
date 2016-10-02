@@ -1,0 +1,2 @@
++[config]
++project = src/AspNet.Samples.WebApp/project.json

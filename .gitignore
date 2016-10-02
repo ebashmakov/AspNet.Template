@@ -269,3 +269,6 @@ paket-files/
 install.lock
 .dotnet/
 .scripts/
+**/wwwroot/lib
+*.min.js
+*.min.css
