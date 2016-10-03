@@ -9,7 +9,8 @@
             "type": "string"
         },
         "branch": {
-            "type": "string"
+            "type": "string",
+            "default": "master"
         }
     },
     "variables": {},

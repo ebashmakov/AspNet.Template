@@ -1,2 +1,2 @@
-+[config]
-+project = src/AspNet.Samples.WebApp/project.json
+[config]
+project = src/AspNet.Samples.WebApp
